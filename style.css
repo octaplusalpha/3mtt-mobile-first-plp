@@ -148,7 +148,7 @@ p {
   body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.6fr 1fr 0.4fr;
+    grid-template-rows: 0.8fr 1fr 0.3fr;
   }
   header {
     grid-column: 1/-1;
@@ -170,7 +170,7 @@ p {
 
   button {
     font-size: 1.5em;
-    margin-top: 70px;
+    margin-top: 6em;
   }
   main {
     grid-column: 1/-1;
@@ -182,7 +182,27 @@ p {
   footer {
     grid-column: 1/-1;
     grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
+  .footer-content-container:nth-child(1) {
+    grid-column: 1;
+    height: 100%;
+  }
+  .footer-content-container:nth-child(1) #map {
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+  .footer-content-container:nth-child(2) {
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+  }
+  .footer-content-container:nth-child(2) ul {
+    margin-top: 150px;
+  }
+
   .text-content,
   .title {
     display: inline-block;
