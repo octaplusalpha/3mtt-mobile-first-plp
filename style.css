@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+/* header section */
+
+header {
+  height: 40vh;
+  width: 100%;
+  height: 100%;
+  background-image: url("resources/3\ screens.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.nav-bar {
+  margin-left: 50%;
+}
+.nav-bar a {
+  font-size: 0.6em;
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.nav-bar a:hover {
+  color: red;
+}
+header h1 {
+  font-size: 2em;
+  padding: 20px;
+}
+#hero-description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 100;
+  font-size: 1.2em;
+  padding: 10px;
+}
+button {
+  font-size: 1em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  background-color: hsla(0, 0%, 1%, 0.374);
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(32, 29%, 88%, 0.553);
+}
+/* main section */
+
+.product-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  /* text-overflow: clip; */
+}
+.product-image-container {
+  align-content: center;
+  background-color: #373c3a;
+  width: 30%;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.products-container {
+  display: flex;
+  background-color: #e68e29;
+  text-align: center;
+}
+.products-container:nth-child(2) {
+  display: flex;
+  background-color: #69db1e;
+  text-align: center;
+}
+.products-container:nth-child(3) {
+  display: flex;
+  background-color: #86a20c;
+  text-align: center;
+}
+.title {
+  font-size: 0.5em;
+  margin-top: 15px;
+}
+.text-content {
+  font-size: 0.4em;
+  text-align: justify;
+  padding: 20px;
+  /* width: 90%; */
+}
+
+/* footer section */
+footer {
+  text-align: center;
+}
+.socials,
+#map {
+  width: 50px;
+}
+#map {
+  margin: auto;
+}
+.footer-content-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  padding: 0.4em;
+
+  margin: auto;
+}
+
+.footer-content-container h4,
+p {
+  color: white;
+  font-size: 0.6em;
+  padding: 10px;
+}
+.footer-content-container:nth-child(2) {
+  background-color: hsla(0, 2%, 52%, 0.742);
+  flex-direction: column;
+  justify-items: center;
+}
+.footer-content-container:nth-child(2) ul {
+  display: flex;
+  justify-content: center;
+}
+.footer-content-container:nth-child(2) ul li {
+  list-style: none;
+  margin: 30px;
+}
+
+/* desktop media query */
+
+@media (min-width: 840px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.6fr 1fr 0.4fr;
+  }
+  header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .nav-bar a {
+    font-size: 1.3em;
+    margin-left: 50px;
+    color: yellow;
+  }
+  header h1 {
+    font-size: 4em;
+  }
+  #hero-description {
+    font-size: 2.1em;
+    font-style: italic;
+  }
+
+  button {
+    font-size: 1.5em;
+    margin-top: 70px;
+  }
+  main {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3);
+    font-size: 1.5em;
+  }
+  footer {
+    grid-column: 1/-1;
+    grid-row: 3;
+  }
+  .text-content,
+  .title {
+    display: inline-block;
+    padding-top: 2.6em;
+  }
+
+  .products-container:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #f38744;
+  }
+  .product-description-container {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    width: 100%;
+  }
+  .product-image-container {
+    width: 100%;
+  }
+  .text-content {
+    margin-bottom: 0.6em;
+  }
+
+  .products-container:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #69db1e;
+  }
+
+  .products-container:nth-child(3) {
+    grid-column: 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #86a20c;
+  }
+}
